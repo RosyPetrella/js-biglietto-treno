@@ -11,4 +11,14 @@ const km = prompt("Quanti km vuoi percorrere?");
 const age = prompt("Quanti anni hai?");
 
 const price = km * 0.21;
-console.log(price);
+
+const minorPrice = price - (price / 100) * 20;
+const seniorPrice = price - (price / 100) * 40;
+
+if (age < 18) {
+  console.log(minorPrice);
+} else if (age >= 65) {
+  console.log(seniorPrice);
+} else {
+  console.log(price);
+}
