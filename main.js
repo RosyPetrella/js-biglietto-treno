@@ -12,8 +12,8 @@ const age = prompt("Quanti anni hai?");
 
 const price = km * 0.21;
 
-const minorPrice = price - (price / 100) * 20;
-const seniorPrice = price - (price / 100) * 40;
+const minorPrice = (price - (price / 100) * 20).toFixed(2);
+const seniorPrice = (price - (price / 100) * 40).toFixed(2);
 
 if (age < 18) {
   console.log(minorPrice);
